@@ -22,7 +22,7 @@ const Dashboard = () => {
 
     return <Box m="20px">
         <Box display={"flex"} justifyContent="space-between" alignItems={"center"}>
-            <Header title="Главная" subtitle="Здесь представлена статистика за текущий месяц" />
+            <Header title="Дашборд" subtitle="Здесь представлена статистика за текущий месяц" />
             <Box>
                 <Button
                     sx={{backgroundColor: colors.blueAccent[700], color: colors.grey[100], fontSize: "14px", fontWeight: "bold", padding: "10px 20px",}}

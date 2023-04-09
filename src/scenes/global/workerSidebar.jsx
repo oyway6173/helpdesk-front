@@ -96,17 +96,17 @@ const Sidebar = () => {
                                     alt="profile-user"
                                     width="100 px"
                                     height="100px"
-                                    src={`../../assets/user.png`}
+                                    src={`../../assets/images/avatars/avatar_4.png`}
                                     style={{ cursor: "pointer", borderRadius: "50%" }}
                                 />
                             </Box>
 
                             <Box textAlign="center">
                                 <Typography variant="h2" color={colors.grey[100]} fontWeight="bold" sx={{ m: "10px 0 0 0" }}>
-                                    Иван Иванов
+                                    Сергей Сергеев
                                 </Typography>
                                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                                    Администратор HD
+                                    Инженер поддержки аka Исполнитель
                                 </Typography>
                             </Box>
 
@@ -171,55 +171,7 @@ const Sidebar = () => {
                             selected={selected}
                             setSelected={setSelected} 
                         />
-                        <Typography
-                            variant="h6"
-                            color={colors.grey[300]}
-                            sx={{ m: "15px 0 5px 20px" }}
-                        >
-                            Администрирование
-                        </Typography>
-                        <Item
-                            title="Пользователи"
-                            to="/users"
-                            icon={<PeopleOutlinedIcon />}
-                            selected={selected}
-                            setSelected={setSelected} 
-                        />
-                        <Item
-                            title="Роли"
-                            to="/roles"
-                            icon={<SocialDistanceIcon />}
-                            selected={selected}
-                            setSelected={setSelected} 
-                        />
-                        <Item
-                            title="Департаменты"
-                            to="/deps"
-                            icon={<DomainAddIcon />}
-                            selected={selected}
-                            setSelected={setSelected} 
-                        />
-                        <Item
-                            title="Ярлыки"
-                            to="/labels"
-                            icon={<LabelIcon />}
-                            selected={selected}
-                            setSelected={setSelected} 
-                        />
-                        <Item
-                            title="Статусы"
-                            to="/status"
-                            icon={<CheckCircleOutlineIcon />}
-                            selected={selected}
-                            setSelected={setSelected} 
-                        />
-                        <Item
-                            title="Приоритеты"
-                            to="/priorities"
-                            icon={<PriorityHighIcon />}
-                            selected={selected}
-                            setSelected={setSelected} 
-                        />
+                       
                     </Box>
 
                 </Menu>

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getCurrentUser } from "../../services/authService";
-import { Link } from "react-router-dom";
-import { AppBar, Toolbar, Button } from "@material-ui/core";
+import { Box, useTheme, Typography } from "@mui/material";
+import { tokens } from "../../theme";
+import Header from "../../components/Header";
 
 const Home = () => {
     const [user, setUser] = useState("");
@@ -10,45 +11,17 @@ const Home = () => {
         setUser(getCurrentUser());
     }, []);
 
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
+
     return (
-        <form>
-            <div>
-                Вы не вошли
-            </div>
-        </form>
-        // <AppBar color="default">
-        //     <Toolbar>
-        //         <h3 style={{ flexGrow: "1" }}>Domain</h3>
-        //         {!user && (
-        //             <React.Fragment>
-        //                 <Link to="/login">
-        //                     <Button
-        //                         style={{ marginRight: "10px" }}
-        //                         variant="outlined"
-        //                         color="secondary"
-        //                     >
-        //                         Login
-        //                     </Button>
-        //                 </Link>
-        //                 <Link to="/signup">
-        //                     <Button variant="outlined" color="secondary">
-        //                         Signup
-        //                     </Button>
-        //                 </Link>
-        //             </React.Fragment>
-        //         )}
-        //         {user && (
-        //             <React.Fragment>
-        //                 <h4 style={{ marginRight: "15px" }}>{user.name}</h4>
-        //                 <Link to="/logout">
-        //                     <Button variant="outlined" color="secondary">
-        //                         Logout
-        //                     </Button>
-        //                 </Link>
-        //             </React.Fragment>
-        //         )}
-        //     </Toolbar>
-        // </AppBar>
+
+         <Box m="20px">
+            <Header title="Главная" subtitle="Добро пожаловать в HelpdeskApp!" />
+
+            
+        </Box>
+        
     );
 };
 
